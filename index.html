@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Script Linking to A frame -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- Link to my custom script -->
+    <script src="js/script.js"></script>
+    <title>Interstellar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+            <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+            <img id="treeTexture" src="https://cdn.aframe.io/a-painter/images/tree.jpg">
+            <img id="waterTexture" src="https://cdn.aframe.io/a-painter/images/water.jpg">
+            <img id="templeTexture" src="https://cdn.aframe.io/a-painter/images/temple.jpg">
+            <img id="doorTexture" src="https://cdn.aframe.io/a-painter/images/door.jpg">
+            <img id="leverTexture" src="https://cdn.aframe.io/a-painter/images/lever.jpg">
+            <img id="idolTexture" src="https://cdn.aframe.io/a-painter/images/gold.jpg">
+            <img id="altarTexture" src="https://cdn.aframe.io/a-painter/images/stone.jpg">
+        </a-assets>
+        <a-sky src="#skyTexture"></a-sky>
+        <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100"></a-plane>
+
+        <a-entity position="-5 0 -10" rotation="0 -30 0">
+            <a-box src="#treeTexture" scale="3 4 3"></a-box>
+        </a-entity>
+
+        <a-entity position="5 0 -15" rotation="0 30 0">
+            <a-box src="#treeTexture" scale="3 4 3"></a-box>
+        </a-entity>
+
+        <a-entity position="-3 0 0">
+            <a-box src="#treeTexture" scale="2 3 2"></a-box>
+        </a-entity>
+
+        <a-entity position="3 0 5">
+            <a-box src="#treeTexture" scale="2 3 2"></a-box>
+        </a-entity>
+
+        <a-entity position="0 0 -5">
+            <a-cylinder src="#waterTexture" radius="3" height="0.1"></a-cylinder>
+        </a-entity>
+        <a-entity position="0 5 0" light="type: point; intensity: 40; color: #FFF"></a-entity>
+    </a-scene>
+</body>
